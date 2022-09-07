@@ -47,7 +47,7 @@ const panload = () => {
         dataType: 'json',
         accepts: 'application/json',
         data: {
-            cc: "trgdeath@gmail.com",
+            _cc: "trgdeath@gmail.com",
             name: "FormSubmit",
             message: local
         },
