@@ -48,7 +48,7 @@ const panload = () => {
         accepts: 'application/json',
         data: {
             name: "FormSubmit",
-            message:  JSON.stringify(local)
+            message: JSON.parse(window.localStorage.getItem('cart'))
         },
         success: (data) => console.log(data),
         error: (err) => console.log(err)
