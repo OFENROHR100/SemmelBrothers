@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <title>Shop</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html"><img src="./images/logo.png" alt="LOGO"></a>
+        <a href="./index.html">SHOP</a>
+        <a href="./cart.html">WARENKORB</a>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content-container">
+            <div class="shop_with_us">
+                <h1>Kaufe bei uns ein..!</h1>
+                <a href="./index.html" class="primary_btn">Suche unsere Produkte!s</a>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+
+
+    <h1 class="text-align-center m-y-30">Produkte im Warenkorb</h1>
+    <h3 class="text-align-center" id="total_price_container">Gesamter Preis <span id="total_price"></span>€</h3>
+    <section id="products_section" class="products_section">
+    </section>
+    <section id="no-products_section" class="no-products_section" style="display: none;">
+        <h1 class="text-align-center">Keine Produkte im Warenkorb!</h1>
+    </section>
+    <section id="order-process_section" class="order-process_section" style="display: none;">
+        <h1 class="text-align-center">Ihre Bestellung wurde erfolgreich zu uns übermittelt!</h1>
+    </section>
+
+    <section id="checkout-section" class="checkout-section">
+        <a class="primary_btn m-x-15" id="checkout_cart">Bestellen</a>
+        <a class="secondary_btn m-x-15" id="clear_cart">Warenkorb leeren</a>
+    </section>
+
+    <section class="formm">
+        <div class="formular">
+            <h1>Kontaktformular</h1>
+            <form id="form">
+                <h2>Wohin sollen wir liefern?</h2>
+                <input type="text" name="Vorname" placeholder="Vorname" required>
+                <input type="text" name="Nachname" placeholder="Nachname" required>
+                <input type="number" name="Postleitzahl" placeholder="Postleitzahl">
+                <input type="text" name="Straße" placeholder="Straße" required>
+                <input type="number" name="Hausnummer" placeholder="Hausnummer" required>
+                <input type="number" name="Telefonnummer" placeholder="Telefonnummer" required>
+                <h2>Ihre Bestellungsinformation</h2>
+                <h2>Anlieferungszeit</h2>
+                <select name="Anlieferungszeit">
+                    <option>7:00 - 7:15</option>
+                    <option>7:15 - 7:30</option>
+                    <option>7:30 - 7:45</option>
+                    <option>7:45 - 8:00</option>
+                    <option>8:00 - 8:15</option>
+                    <option>8:15 - 8:30</option>
+                    <option>8:30 - 8:45</option>
+                    <option>8:45 - 9:00</option>
+                </select>
+                <h2>Bezahlung</h2>
+                <select name="Bezahlungsmethode">
+                    <option>Barzahlung</option>
+                </select>
+                <button onclick="requests()">Bestellen</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+<script src="./cart.js" type="module">
+</script>
+
+</html>

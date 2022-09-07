@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Shop</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html"><img src="./images/logo.png" alt="LOGO"></a>
+        <a href="#">Über uns</a>
+        <a href="#">Sortiment</a>
+        <a href="./index.html">Shop</a>
+        <a href="./cart.html">Warenkorb</a>
+        <a href="./main.html">Kontakt</a>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content-container">
+            <div class="shop_with_us">
+                <h1>Kaufe bei uns ein..!</h1>
+                <a href="#products_section" class="primary_btn">Suche unsere Produkte!</a>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+
+
+    <h1 class="text-align-center m-y-30">Unsere Produkte</h1>
+    <h1 class="text-align-center" style="display: none;" id="no_product_available">Es sind noch keine Produkte vorhanden!</h1>
+    <section id="products_section" class="products_section">
+        <div class="product-card" data-name="Kornknacker" data-price="12" data-id="0">
+            <div>
+                <img src="./images/fruits/Kornknacker.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Kornknacker
+            </h3>
+            <p class="text-align-center">
+                Das beliebeteste Brötchen
+            </p>
+            <p><b>Preis: 12€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Eisenbahnschienen" data-price="5" data-id="1">
+            <div>
+                <img src="./images/sl.jpeg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Eisenbahnschienen
+            </h3>
+            <p class="text-align-center">
+                Ein super Kuchen!
+            </p>
+            <p><b>Preis: 5€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Eisenbahnschienen (2).jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+
+
+
+    </section>
+</body>
+<script src="./app.js"></script>
+
+</html>
