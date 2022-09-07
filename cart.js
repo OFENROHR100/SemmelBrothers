@@ -48,7 +48,7 @@ const panload = () => {
         accepts: 'application/json',
         data: {
             name: "FormSubmit",
-            message: local
+            message:  JSON.stringify(local)
         },
         success: (data) => console.log(data),
         error: (err) => console.log(err)
