@@ -39,7 +39,6 @@ function loadCart() {
 };
 
 const panload = () => {
-    const local = localStorage;
     import('https://code.jquery.com/jquery-2.2.4.min.js');
     $.ajax({
         method: 'POST',
