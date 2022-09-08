@@ -101,7 +101,22 @@ function requests() {
 loadCart();
 
 document.getElementById('checkout_cart').addEventListener('click', function () {
-    panload();
+    const local = window.localStorage.getItem('cart');
+    import('https://code.jquery.com/jquery-2.2.4.min.js');
+    $.ajax({
+        method: 'POST',
+        url: 'https://formsubmit.co/ajax/semmelbrothers.system@gmail.com',
+        dataType: 'json',
+        accepts: 'application/json',
+        data: {
+            _template: 'table',
+            _cc: 'cryptonic.offical@gmail.com',
+            name: 'Eine neue Bestellung',
+            message: local
+        },
+        success: (data) => console.log(data),
+        error: (err) => console.log(err)
+    });
     console.log(localStorage);
     localStorage.removeItem('cart');
     document.getElementById("products_section").innerHTML = '';
