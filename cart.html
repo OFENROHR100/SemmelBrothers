@@ -63,15 +63,15 @@
                 <input type="number" name="Telefonnummer" placeholder="Telefonnummer" required>
                 <h2>Ihre Bestellungsinformation</h2>
                 <h2>Anlieferungszeit</h2>
-                <select name="Anlieferungszeit">
-                    <option>7:00 - 7:15</option>
-                    <option>7:15 - 7:30</option>
-                    <option>7:30 - 7:45</option>
-                    <option>7:45 - 8:00</option>
-                    <option>8:00 - 8:15</option>
-                    <option>8:15 - 8:30</option>
-                    <option>8:30 - 8:45</option>
-                    <option>8:45 - 9:00</option>
+                <select name="Anlieferungszeit" onchange="retiveData(this.value)">
+                    <option value="siebeneins">7:00 - 7:30</option>
+                    <option value="siebenzwei">7:30 - 8:00</option>
+                    <option value="achteins">8:00 - 8:30</option>
+                    <option value="achtzwei">8:30 - 9:00</option>
+                    <option value="neuneins">9:30 - 10:00</option>
+                    <option value="neunzwei">10:30 - 11:00</option>
+                    <option value="elfeins">11:00 - 11:30</option>
+                    <option value="elfzwei">11:30 - 12:00</option>
                 </select>
                 <h2>Bezahlung</h2>
                 <select name="Bezahlungsmethode">
@@ -81,7 +81,6 @@
             </form>
         </div>
     </section>
-
 </body>
 <script src="./cart.js" type="module">
 </script>

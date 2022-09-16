@@ -38,24 +38,23 @@ function loadCart() {
     }
 };
 
-const panload = () => {
-    const local = window.localStorage.getItem('cart');
-    import('https://code.jquery.com/jquery-2.2.4.min.js');
-    $.ajax({
-        method: 'POST',
-        url: 'https://formsubmit.co/ajax/semmelbrothers.system@gmail.com',
-        dataType: 'json',
-        accepts: 'application/json',
-        data: {
-            _template: 'table',
-            _cc: 'cryptonic.offical@gmail.com',
-            name: 'Eine neue Bestellung',
-            message: local
-        },
-        success: (data) => console.log(data),
-        error: (err) => console.log(err)
-    });
-};
+function retiveData(str) {
+    var xhttp;
+    if (str == "") {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    }
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      if (parseInt(this.responseText) > 12) {
+        document.getElementById(str).style.visibility = "hidden";
+      }
+      }
+    };
+    xhttp.open("GET", "retrivedata.php?q="+str, true);
+    xhttp.send();
+}
 
 function sleep(milliseconds) {
     var start = new Date().getTime();
@@ -64,7 +63,7 @@ function sleep(milliseconds) {
         break;
       }
     }
-  }
+}
 
 window.alert = function() {};
 
@@ -84,24 +83,10 @@ function check() {
 
 }
 
-function requests() {
-    console.log("Ne")
-    Email.send({
-        SecureToken : "5f98367f-5492-4ad4-8f1f-304ad8c77e42",
-        To : 'okayzzzzzzzzzzzzz@gmail.com',
-        From : "semmelbrothers.system@gmail.com",
-        Subject : "System: Eine neue Bestellung",
-        Body : "Niggerianerscher Kinderkrieger auf der Suche nach einer Familie in Nordamerika, um Bisons mit Macheten und Maschingweheren zu Jagen!Alabama"
-    }).then(
-      message => alert("Die Email wurde erfolgreich gesendet!")
-    );
-    sleep(5000)
-};
-
 loadCart();
 
 document.getElementById('checkout_cart').addEventListener('click', function () {
-    const local = window.localStorage.getItem('cart');
+    const local = localStorage;
     import('https://code.jquery.com/jquery-2.2.4.min.js');
     $.ajax({
         method: 'POST',
@@ -109,10 +94,9 @@ document.getElementById('checkout_cart').addEventListener('click', function () {
         dataType: 'json',
         accepts: 'application/json',
         data: {
-            _template: 'table',
-            _cc: 'cryptonic.offical@gmail.com',
-            name: 'Eine neue Bestellung',
-            message: local
+            _cc: "trgdeath@gmail.com",
+            name: "FormSubmit",
+            message: window.localStorage.getItem('cart')
         },
         success: (data) => console.log(data),
         error: (err) => console.log(err)
@@ -124,6 +108,7 @@ document.getElementById('checkout_cart').addEventListener('click', function () {
     document.getElementById("checkout-section").style.display = 'none';
 
 })
+
 document.getElementById('clear_cart').addEventListener('click', function () {
     localStorage.removeItem('cart');
     loadCart();
