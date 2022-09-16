@@ -1,4 +1,3 @@
-
 function loadCart() {
     let productsSection = document.getElementById("products_section");
     productsSection.innerHTML = '';
@@ -96,3 +95,21 @@ document.getElementById('clear_cart').addEventListener('click', function () {
     localStorage.removeItem('cart');
     loadCart();
 })
+
+function retriveData(str) {
+    var xhttp;
+    if (str == "") {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    }
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      if (parseInt(this.responseText) > 12) {
+        document.getElementById(str).style.visibility = "hidden";
+      }
+      }
+    };
+    xhttp.open("GET", "retrivedata.php?q="+str, true);
+    xhttp.send();
+}
