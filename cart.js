@@ -38,7 +38,7 @@ function loadCart() {
     }
 };
 
-function retiveData(str) {
+function retriveData(str) {
     var xhttp;
     if (str == "") {
       document.getElementById("txtHint").innerHTML = "";
@@ -54,7 +54,7 @@ function retiveData(str) {
     };
     xhttp.open("GET", "retrivedata.php?q="+str, true);
     xhttp.send();
-}
+};
 
 function sleep(milliseconds) {
     var start = new Date().getTime();
