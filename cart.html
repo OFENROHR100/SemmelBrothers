@@ -5,34 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="icon" type="image/x-icon" href="./images/Logo.jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/aab78d6c4a.js" crossorigin="anonymous"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <title>Shop</title>
 </head>
 
 <body>
-    <nav>
-        <a href="./index.html"><img src="./images/logo.png" alt="LOGO"></a>
-        <a href="./index.html">SHOP</a>
-        <a href="./cart.html">WARENKORB</a>
-    </nav>
-
-    <section class="hero-section">
-        <div class="hero-content-container">
-            <div class="shop_with_us">
-                <h1>Kaufe bei uns ein..!</h1>
-                <a href="./index.html" class="primary_btn">Suche unsere Produkte!s</a>
-            </div>
-            <div>
-            </div>
-        </div>
-    </section>
-
+    <nav class="navbar">
+        <div class="logo" onclick="redirect()"><strong>SemmelBrothers</strong></div>
+        <ul class="nav-links">
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="menu">
+            <li><a href="./shop.html"><strong>Shop</strong></a></li>
+            <li><a href="./cart.html"><strong>Warenkorb</strong></a></li>
+            <li><a href="/"><strong>Team</strong></a></li>
+            <li><a href="/"><strong>Partner</strong></a></li>
+            <li><a href="/"><strong>Kontakt</strong></a></li>
+          </div>
+        </ul>
+      </nav>
 
     <h1 class="text-align-center m-y-30">Produkte im Warenkorb</h1>
     <h3 class="text-align-center" id="total_price_container">Gesamter Preis <span id="total_price"></span>€</h3>

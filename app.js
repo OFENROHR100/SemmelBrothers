@@ -40,6 +40,9 @@ function addToCart(event) {
     }
 }
 
+function redirect() {
+    location.replace("./index.html");
+}
 
 (function checkProductAvailability() {
     document.getElementById("products_section").children.length === 0 ? document.getElementById("no_product_available").style.display = 'block' : document.getElementById("no_product_available").style.display = 'none';

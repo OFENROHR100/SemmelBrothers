@@ -12,7 +12,7 @@ function loadCart() {
             productHTML = productHTML + `
         <div class="product-card" data-name="${item.itemName}" data-price="${item.price}" data-id="${item.itemId}">
         <div>
-            <img src="./images/fruits/${item.itemName}.jpg" alt="FRUIT" width="180">
+            <img src="./images/Gebäcke/${item.itemName}.jpg" alt="FRUIT" width="180">
         </div>
         <h3>
         ${item.itemName}
@@ -39,6 +39,10 @@ function loadCart() {
         document.getElementById("total_price_container").style.display = 'none';
     }
 };
+
+function redirect() {
+    location.replace("./index.html");
+}
 
 function sleep(milliseconds) {
     var start = new Date().getTime();

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="icon" type="image/x-icon" href="./images/Logo.jpg">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/aab78d6c4a.js" crossorigin="anonymous"></script>
+    <title>Shop</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="redirect()"><strong>SemmelBrothers</strong></div>
+        <ul class="nav-links">
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="menu">
+            <li><a href="./shop.html"><strong>Shop</strong></a></li>
+            <li><a href="./cart.html"><strong>Warenkorb</strong></a></li>
+            <li><a href="/"><strong>Team</strong></a></li>
+            <li><a href="/"><strong>Partner</strong></a></li>
+            <li><a href="/"><strong>Kontakt</strong></a></li>
+          </div>
+        </ul>
+      </nav>
+
+    <h1 class="text-align-center m-y-30">Unsere Produkte</h1>
+    <h3 class="catagory">Brötchen</h3>
+    <h1 class="text-align-center" style="display: none;" id="no_product_available">Es sind noch keine Produkte vorhanden!</h1>
+    <section id="products_section" class="products_section">
+        <div class="product-card" data-name="Ährenspitz" data-price="0.75" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Ährenspitz.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Ährenspitz
+            </h3>
+            <p class="text-align-center">
+                Wie der Name schon sagt: Einsame Spitze.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,75€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Bauernbrötchen" data-price="0.60" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Bauernbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Bauernbrötchen
+            </h3>
+            <p class="text-align-center">
+                Für Bauern und alle anderen ein Klassiker
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,60€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Dänische Sesam" data-price="0.95" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Dänische Semsam.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Dänisches Sesambrötchen
+            </h3>
+            <p class="text-align-center">
+                Frisch aus Dänemark, äh Lübeck!
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,95€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Dänischhellermohn" data-price="0.95" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Dänischhellermohn.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Dänischer Weißermohn
+            </h3>
+            <p class="text-align-center">
+                Den Mohn gibt’s auch in weiß? Ja, Klar!
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,95€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Dinkelbrötchen" data-price="0.75" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Dinkelbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Dinkelbrötchen
+            </h3>
+            <p class="text-align-center">
+                100% Dinkel, 100% Lecker.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,75€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Fitty" data-price="0.75" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Fitty.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Fitty
+            </h3>
+            <p class="text-align-center">
+                Empfehlung von uns, hält fit!
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,75€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Goldis" data-price="0.53" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Goldis.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Goldi
+            </h3>
+            <p class="text-align-center">
+                Goldig und gut im Geschmack
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,53€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Hörnchen" data-price="0.82" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Hörnchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Hörnchen
+            </h3>
+            <p class="text-align-center">
+                Ein Hörnchen ? Nehmen sie lieber noch eins!
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,82€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Kartoffelroggenbrötchen" data-price="0.75" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Kartoffelroggenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Kartoffelroggenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Kartoffel im Brötchen? Ja und es schmeckt auch noch.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,75€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="KäseBrötchen" data-price="1" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/KäseBrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Käsebrötchen
+            </h3>
+            <p class="text-align-center">
+                Käse und Brötchen, das ist das Rezept für das perfekte Brötchen.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 1€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Baguettebrötchen" data-price="1" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Baguettebrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Baguettebrötchen
+            </h3>
+            <p class="text-align-center">
+                Ein sehr kleines Baguette, das gibt es auch in Groß.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 1€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Kornknacker" data-price="0.75" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Kornknacker.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Kornknacker
+            </h3>
+            <p class="text-align-center">
+                Unsere Enpfehlung, schmeckt einfach gut.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,75€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+
+        <div class="product-card" data-name="Kümmelring" data-price="0.80" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Kümmelring.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Kümmelring
+            </h3>
+            <p class="text-align-center">
+                Ein muss für jeden Kümmelliebhaber.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,80€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Kümmelstange" data-price="0.82" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Kümmelstange.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Kümmelstange
+            </h3>
+            <p class="text-align-center">
+                Ein muss für jeden Kümmelliebhaber.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,82€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Kürbiskernbrötchen" data-price="0.75" data-id="0">
+            <div>
+                <img src="./images/Gebäcke/Kürbiskernbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Kürbiskernbrötchen
+            </h3>
+            <p class="text-align-center">
+                Große Kerne mit großartigem Geschmack.
+            </p>
+            <a href="./allergene.html" class="allergene">Allergene</a>
+            <p><b>Preis: 0,75€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+        <div class="product-card" data-name="Laugenbrötchen" data-price="20" data-id="2">
+            <div>
+                <img src="./images/fruits/Laugenbrötchen.jpg" alt="FRUIT" width="180">
+            </div>
+            <h3>
+                Laugenbrötchen
+            </h3>
+            <p class="text-align-center">
+                Sehr beliebt!
+            </p>
+            <p><b>Preis: 20€</b></p>
+            <div>
+                <input class="primary_input" type="number" placeholder="Anzahl">
+            </div>
+
+            <button class="primary_btn m-y-15" onclick="addToCart(this)">Zum Warenkorb hinzufügen</button>
+
+        </div>
+
+
+
+
+    </section>
+</body>
+<script src="./app.js"></script>
+
+</html>
