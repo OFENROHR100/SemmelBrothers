@@ -1,3 +1,5 @@
+addEventListener('DOMContentLoaded', (event) => {});
+
 function loadCart() {
     let productsSection = document.getElementById("products_section");
     productsSection.innerHTML = '';
